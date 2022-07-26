@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 :root{
     --color1:#10393C;
     --color2:#FFC727;
@@ -47,12 +50,12 @@ img{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80vh;
+    height: 80%;
 }
 .heroMessage{
     display: grid;
     place-items: start;
-    padding: 10rem 0 0 8rem;
+    padding: 10rem 0 2rem 8rem;
     width: 45%;
 }
 .heroH1{
@@ -107,7 +110,7 @@ img{
     margin: 4rem 0 2rem;
 }
 .gapP1{
-    font: 300 2rem/2rem Poppins, sans-serif;
+    font: 300 2rem/2.5rem Poppins, sans-serif;
     color: var(--color4);
     text-align: center;
 }
@@ -116,7 +119,7 @@ img{
 }
 .gapDivWrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
     gap: 2rem;
     margin: 2rem 0;
 }
@@ -188,9 +191,8 @@ img{
 .testiCenter{
     display: grid;
     grid-template-columns: 2fr 6fr;
-    justify-content: center;
-    align-items: center;
-    /* gap: 2rem; */
+    /* justify-content: center;
+    align-items: center; */
     border-radius: 1rem;
     width: 70%;
     background: var(--color4);
@@ -214,7 +216,7 @@ img{
 .testiP1{
     font:italic 400 1.2rem/1.5rem Poppins,sans-serif;
     color: var(--color6);
-    padding:0 2rem;
+    padding:1.5rem 2rem;
 }
 .testiP2{
     font:500 1.3rem/1.5rem Poppins,sans-serif;
@@ -230,6 +232,7 @@ img{
     height: 100%;
     width: 100%;
     object-fit:cover;
+    border-radius: 2rem ;
 }
 /* partners section  */
 .parnDiv{
@@ -329,7 +332,7 @@ img{
 }
 .footWrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(20rem, 1fr));
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
@@ -351,7 +354,7 @@ img{
 }
 .footDiv3{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(4rem,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(3rem,1fr));
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -368,4 +371,69 @@ img{
     height: 100%;
     width:100% ;
     object-fit: contain;
+}
+
+@media only screen and (max-width:770px){
+    .heroMessage{
+        width: 100%;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 2rem;
+       }
+       .heroH1{
+        font:700 1.8rem/4.5rem Poppins, sans-serif;
+        color: var(--color2);
+        }
+        .heroP{
+        font: 300 1.2rem/2rem Poppins, sans-serif;
+        color: var(--color4);
+        margin: 2rem 0 0 0;
+        }
+        .heroBtn{
+            background: var(--color1);
+        }
+}
+@media only screen and (max-width:635px) {
+   .heroWrapper{
+        height: 100%;
+   } 
+   .heroMessage{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 2rem;
+   }
+   .heroH1{
+    font:700 1.8rem/4.5rem Poppins, sans-serif;
+    color: var(--color2);
+    }
+    .heroP{
+    font: 300 1.2rem/2rem Poppins, sans-serif;
+    color: var(--color4);
+    margin: 2rem 0 0 0;
+    }
+    .heroBtn{
+        background: var(--color1);
+    }
+    .messageDiv,.ctDiv{
+        display: grid;
+        grid-template-columns: minmax(auto,80%);
+    }
+    .testiWrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .testiCenter{
+        display: grid;
+        grid-template-columns: 1fr;
+    }   
+    .testiP1{
+        padding: 2rem 2rem 0;
+    }
+    .testiImg{
+        border-radius: 2rem;
+    }
 }
